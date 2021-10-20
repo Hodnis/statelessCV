@@ -1,0 +1,87 @@
+body {
+  padding: 3% 15%;
+  background-color: lightblue;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn {
+  background-color: #008cba;
+  color: white;
+  display: inline-block;
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.btn-add {
+  background-color: #2d9abb;
+  color: white;
+  display: inline-block;
+  border: none;
+  padding: 5px 15px;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+#printerButton {
+  text-align: center;
+  float: right;
+  clear: both;
+  margin-bottom: 100px;
+}
+
+/* PERSONAL FORM */
+#personal-form {
+  float: left;
+}
+#personal-form-hidden {
+  float: right;
+}
+
+#kompetanse,
+#kompetanse-hidden {
+  resize: none;
+}
+
+#adresse,
+#adresse-hidden {
+  margin-bottom: 1px;
+}
+/* UTDANNING FORM */
+
+#utdanning-form {
+  float: left;
+  clear: both;
+  margin-bottom: 100px;
+}
+
+#utdanning-form-hidden {
+  float: right;
+  margin-bottom: 100px;
+}
+
+#btn-new-utdanning {
+  float: left;
+  display: none;
+  clear: both;
+  margin-top: 2px;
+}
+
+#testskjema {
+  float: left;
+  clear: both;
+  margin-top: 25px;
+}
+
+#yourform {
+  float: left;
+  clear: both;
+  margin-bottom: 1000px;
+}
+
+#testskjema {
+  margin-bottom: 100px;
+}

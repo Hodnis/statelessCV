@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stateless CV</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- HEADING-->
+
+    <!-- START BUTTON-->
+    <!--
+    <div id="btn-start" class="btn">Personlig Info (vis/skjul)</div>
+    -->
+    <!-- FORM PERSONAL DETAILS-->
+    <div>
+      <form id="personal-form">
+        <h1>Curriculum Vitae</h1>
+        <h2>Personlig Info</h2>
+        <label for="fnavn">Fornavn:</label><br />
+        <input type="text" id="fnavn" name="fnavn" /><br />
+        <label for="enavn">Etternavn:</label><br />
+        <input type="text" id="enavn" name="enavn" /><br />
+        <label for="adresse">Adresse:</label><br />
+        <input type="text" id="adresse" name="adresse" /><br />
+        <input
+          type="text"
+          id="adresse-second-line"
+          name="adresse-second-line"
+        /><br />
+        <label for="epost">E-post:</label><br />
+        <input type="email" required id="epost" name="epost" /><br />
+        <label for="mobil">Mobil:</label><br />
+        <input type="number" id="mobil" name="mobil" /><br />
+        <label for="sivilstatus">Sivilstand:</label><br />
+
+        <select name="sivilstatus" id="sivilstatus">
+          <option value=""></option>
+          <option value="gift/registert-partner">
+            Gift/registrert partner
+          </option>
+          <option value="enslig">Enslig</option>
+          <option value="samboer">Samboer</option>
+        </select>
+        <br />
+        <label for="born">Født:</label><br />
+
+        <input type="date" id="born" name="born" /><br />
+        <label for="kompetanse">Nøkkelkompetanse:</label><br />
+        <textarea
+          name="kompetanse"
+          id="kompetanse"
+          cols="40"
+          rows="10"
+        ></textarea>
+      </form>
+    </div>
+    <!-- FORM PERSONAL DETAILS HIDDEN-->
+    <div>
+      <form id="personal-form-hidden">
+        <h1>Curriculum Vitae</h1>
+        <h2>Personlig Info</h2>
+        <label for="fnavn-hidden-label" id="fnavn-hidden-label">Fornavn:</label
+        ><br />
+        <input type="text" id="fnavn-hidden" name="fnavn-hidden" readonly />
+        <br />
+        <label for="enavn-hidden-label" id="enavn-hidden-label"
+          >Etternavn:</label
+        ><br />
+        <input
+          type="text"
+          id="enavn-hidden"
+          name="enavn-hidden"
+          readonly
+        /><br />
+        <label for="adresse-hidden-label" id="adresse-hidden-label"
+          >Adresse:</label
+        ><br />
+        <input type="text" id="adresse-hidden" name="adresse" readonly /><br />
+        <input
+          type="text"
+          id="adresse-second-line-hidden"
+          name="adresse"
+          readonly
+        /><br />
+        <label for="epost-hidden-label" id="epost-hidden-label">E-post:</label
+        ><br />
+        <input
+          type="email"
+          id="epost-hidden"
+          name="epost-hidden"
+          readonly
+        /><br />
+        <label for="mobil-hidden-label" id="mobil-hidden-label">Mobil:</label
+        ><br />
+        <input
+          type="number"
+          id="mobil-hidden"
+          name="mobil-hidden"
+          readonly
+        /><br />
+        <label for="sivilstatus-hidden-label" id="sivilstatus-hidden-label"
+          >Sivilstatus:</label
+        ><br />
+        <input
+          type="text"
+          id="sivilstatus-hidden"
+          name="sivilstatus-hidden"
+          readonly
+        /><br />
+        <label for="born-hidden-label" id="born-hidden-label">Født:</label
+        ><br />
+        <input
+          type="date"
+          id="born-hidden"
+          name="born-hidden "
+          readonly
+        /><br />
+        <label for="kompetanse-hidden-label" id="kompetanse-hidden-label"
+          >Nøkkelkompetanse:</label
+        ><br />
+        <textarea
+          name="kompetanse-hidden"
+          id="kompetanse-hidden"
+          cols="40"
+          rows="10"
+          readonly
+        ></textarea>
+      </form>
+    </div>
+    <!--UTDANNING BTN-->
+    <!--
+    <div id="btn-utdanning" class="btn">Utdanning (vis/skjul)</div>
+    -->
+    <!-- UTDANNING FORM -->
+    <!--
+    <div>
+      <form id="utdanning-form">
+        <label for="year">Årstall:</label><br />
+        <input type="text" id="year" name="year" /><br />
+      </form>
+    </div>
+    -->
+    <form id="utdanning-form">
+      <div id="itemRows">
+        <h2>Utdanning</h2>
+        <label for="dato"> Dato: </label> <br />
+        <input type="date" id="dato-utdanning" name="add_utdanning_date" />
+        <br />
+        <label for="dato"> Beskrivelse: </label> <br />
+        <textarea
+          name="add_utdanning_field"
+          id="utdanning-field"
+          cols="40"
+          rows="10"
+        ></textarea>
+
+        <input onclick="addRow(this.form);" type="button" value="Add row" />
+      </div>
+    </form>
+    <!-- UTDANNING FORM HIDDEN -->
+    <form id="utdanning-form-hidden" class="GFG">
+      <div id="itemRows-hidden">
+        <h2>Utdanning</h2>
+        <label for="dato" id="dato-utdanning-label"> Dato: </label>
+        <br />
+        <input
+          type="date"
+          id="dato-utdanning-hidden"
+          name="add_utdanning_date-hidden"
+          readonly
+        />
+        <br />
+        <label for="dato" id="utdanning-field-label"> Beskrivelse: </label>
+        <br />
+        <textarea
+          name="add_utdanning_field-hidden"
+          id="utdanning-field-hidden"
+          cols="40"
+          rows="10"
+          readonly
+        ></textarea>
+      </div>
+    </form>
+
+    <!-- BUTTON PRINT-->
+    <div id="printerButton">
+      <h3>Print</h3>
+      <input type="button" value="click" onclick="printDiv()" />
+    </div>
+
+    <!-- TEST AV SKJEMA-->
+    <!--
+    <div id="testskjema">
+      <fieldset id="buildyourform">
+        <legend>Test av add/remove-form</legend>
+      </fieldset>
+      <input type="button" value="Legg til felt" class="add" id="add" />
+    </div>
+-->
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
