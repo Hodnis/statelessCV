@@ -85,3 +85,17 @@ body {
 #testskjema {
   margin-bottom: 100px;
 }
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #personal-form-hidden * {
+    visibility: visible;
+  }
+  #personal-form-hidden {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
