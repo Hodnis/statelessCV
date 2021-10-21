@@ -96,9 +96,10 @@ function addRow(frm) {
     rowNum +
     '">Dato: <br /><input type="date" name="add_utdanning_date[]" value="' +
     frm.add_utdanning_date.value +
-    '"> <br/><input type="textarea" name="add_utdanning_field[]" cols="40" rows="10" value="' +
+    '"> <br/><textarea name="add_utdanning_field[]" cols="40" rows="10" value="' +
     frm.add_utdanning_field.value +
-    '"> <input type="button" value="Remove" onclick="removeRow(' +
+    '"></textarea>' +
+    '<input type="button" value="Remove" onclick="removeRow(' +
     rowNum +
     ');"></p>';
   $("#itemRows").append(row);
@@ -107,9 +108,9 @@ function addRow(frm) {
     rowNumHidden +
     '">Dato: <br /><input readonly type="date" name="add_utdanning_date[]" value="' +
     frm.add_utdanning_date.value +
-    '"> <br/><input readonly type="textarea" name="add_utdanning_field[]" cols="40" rows="10" value="' +
+    '"> <br/><textarea readonly name="add_utdanning_field[]" cols="40" rows="10" value="' +
     frm.add_utdanning_field.value +
-    '"> ';
+    '"></textarea> ';
   $("#itemRows-hidden").append(rowHidden);
   frm.add_qty.value = "";
   frm.add_name.value = "";
